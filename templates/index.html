@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}
+	<title>Онлайн магазин</title>
+{% endblock %}
+    
+{% block body %}
+    <div class="text-center"><h1>Онлайн магазин</h1>
+    <p><b>Сеть магазинов и складов, специализирующаяся на подборе и продаже минитракторов, а также производстве и импорте минитракторов и орудий к ним. Занимается сервисным обслуживанием сельскохозяйственной, садовой и коммунальной техники в России    </b></p></div>
+
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+    {% for el in items %}
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm border-primary">
+          <div class="card-header py-3 text-bg-primary border-primary">
+            <h4 class="my-0 fw-normal">{{ el.title }}</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">{{ el.price }} ₽</h1>
+            <img width="200" alt={{ el.title }} src={{ el.image_scr }} >
+
+            <p class="list-unstyled mt-3 mb-4">
+            {{ el.description_text }}
+            </p>
+
+            <button type="button" class="w-100 btn btn-lg btn-primary">Купить</button>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+	<title>Добовление товара</title>
+{% endblock %}
+
+{% block body %}
+    <h1>Добовление товара</h1>
+    <form method="post">
+        <input type="text" class="form-control" name="title" id="title" placeholder="Введите наименование" ><br>
+        <input type="number" class="form-control" name="price" id="price" placeholder="Введите цену"><br>
+        <input type="text" class="form-control" name="image_scr" id="image_scr" placeholder="Введите url картинки" ><br>
+        <input type="text" class="form-control" name="description_text" id="description_text" placeholder="Введите описание" ><br>
+        <button class="btn btn-success" type="submit"> Добавить товар</button>
+    </form>
+{% endblock %}
