@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block company_name %}
 
-    {{ page_info[0].company_name }}
+     {{ page_info[0].company_name }}
 
 {% endblock %}
 
@@ -21,7 +21,7 @@
           </div>
           <div class="card-body">
             <h1 class="card-title pricing-card-title">{{ el.price }} ₽</h1>
-            <img height="200" alt={{ el.title }} src={{ el.file }} >
+            <img height="180" alt={{ el.title }} src={{ el.file }} >
 
             <p class="list-unstyled mt-3 mb-4">
             {{ el.description_text }}
