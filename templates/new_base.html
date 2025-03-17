@@ -6,15 +6,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Kumbh+Sans:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
 	
 	<meta charset="UTF-8">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-    <link rel="stylesheet" href="D:\user\doc\test\static\css\css.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/css.css') }}">
+    <link rel="stylesheet" href="C:\Users\makashirov\PycharmProjects\FlaskProject\static\css\css.css">
 	<title>Document</title>
 </head>
 <body>
 	<header class="header">
 		<div class="container">
 				<div class="header_inner">
-					<div class="header_logo">logo</div>
+					<img class="header_logo" src="/static/site_image/logo.png"></img>
 					<nav class="nav lato-bold">
 					<a class="nav_link" href="#">Главная</a>
 					<a class="nav_link" href="#">Галерея</a>
@@ -29,8 +29,58 @@
 			<div class="intro_inner">
 					<h1 class="intro_title">3D Печать Бузулук</h1>
 					<h2 class="intro_subtitle">Виртуальное в осезаемое</h2>
+                    <a class="btn" href="#">Галерея</a>
+                <div class="container">
+                    <img src="/static/site_image/img2.jpg" alt="left" class="image_left_inner">
+                    <img src="/static/site_image/img1.jpg" alt="top" class="image_top_inner">
+                    <img src="/static/site_image/img3.jpg" alt="right" class="image_right_inner">
+                </div>
+
 			</div>
 		</div>
 	</div>
+    <div class="content">
+        <div class="container">
+           <p class="content_title">Наше кредо</p>
+            <div class="container">
+            <h1 class="content_sub_title ">Это не просто 3Dпечать- это наша страсть</h1>
+            <h3 class="content_text_title " >Мы сделали качество нашей привычкой. Это не то, к чему
+                мы просто стремимся – мы живем по этому принципу каждый
+                день. В то время как большая часть вещей, связанных с
+                творческим процессом, будет забыта, о превосходстве наших
+                продуктов и услуг будут помнить.</h3>
+            </div>
+        </div>
+    </div>
+    <div class="content_about">
+        <div class="container">
+            <div class="container"><p class="content_title">О нас</p>
+            <img class="img_work" src="/static/site_image/printer.png">
+            </div>
+            <div class="container">
+            <h1 class="content_sub_title_about">НАШИ ВОЗМОЖНОСТИ</h1>
+
+            </div>
+            <h3 class="content_text_title_about" >
+                Качественная 3D печать по разумным ценам. <br>
+                - Помощь в подготовке модели; <br>
+                - Создание модели по чертежам; <br>
+                - Создание модели по эскизам <br>
+                - Создание модели по картинкам. <br>
+                - Рабочая зона стола: ширина 400*400 высота 400 мм.
+            </h3>
+        </div>
+    </div>
+<footer class="footer">
+    <img class="footer_image" alt="" src="/static/site_image/futer_image.jpg">
+    <div class="container">
+        <h1>Адрес</h1>
+        <h2>Оренбургская обл.  Бузулук</h2>
+        <h1>Контакты</h1>
+        <h2>+79325508930 <br>
+3dprintbuzuluk@mail.ru</h2>
+
+    </div>
+</footer>
 </body>
 </html>
