@@ -79,7 +79,7 @@ def index():
 
 
 
-"""@app.route('/create', methods=['GET', 'POST'])
+@app.route('/create', methods=['GET', 'POST'])
 def create():
     if request.method == 'POST':
         file = request.files['file']
@@ -101,7 +101,7 @@ def create():
         except:
             return "Выпола ошибка"
     else:
-        return render_template("create.html")"""
+        return render_template("create.html")
 
 
 
