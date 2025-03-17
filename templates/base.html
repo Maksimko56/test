@@ -1,69 +1,68 @@
 <!doctype html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    {% block title %}{% endblock %}
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        {% block title %}{% endblock %}
 
-</head>
+    </head>
 <body>
  <header class="container">
 <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom ">
       <a href="/" class="d-flex align-items-center link-body-emphasis text-decoration-none">
-        <span class="fs-4"><ya-tr-span data-index="1-0" data-translated="true" data-source-lang="en" data-target-lang="ru"
-           data-value="Pricing example" data-translation="Пример ценообразования" data-ch="0"
-           data-type="trSpan" style="visibility: inherit !important;" data-selected="false">{% block company_name %}
+        {% block company_name %}
 
-           {% endblock %}</ya-tr-span></span>
+           {% endblock %}
       </a>
       <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
         <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="/">Главная</a>
         <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="/about">О магазине</a>
       </nav>
-    <a class="btn btn-outline-primary " href="/admin" >Админка</a>
+        <a class="btn btn-outline-primary " href="/admin" >Админка</a>
     </div>
  </header>
+ <content>
 <div class="container">{% block body %}{% endblock %}</div>
-
+</content>
 
 
 
 <footer class="pt-4 my-md-5 pt-md-5 border-top container">
     <div class="row">
       <div class="col-12 col-md">
-        <small class="d-block mb-3 text-body-secondary"><ya-tr-span data-index="39-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="© 2017–2024" data-translation="© 2017–2024" data-ch="0" data-type="trSpan" style="visibility: inherit !important;">© 2017–2024</ya-tr-span></small>
+        <small class="d-block mb-3 text-body-secondary">© 2017–2025</small>
       </div>
       <div class="col-6 col-md">
-        <h5><ya-tr-span data-index="40-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="Features" data-translation="Характеристики" data-ch="1" data-type="trSpan" style="visibility: inherit !important;">Характеристики</ya-tr-span></h5>
+        <h5>Характеристики</h5>
         <ul class="list-unstyled text-small">
-          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><ya-tr-span data-index="41-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="Cool stuff" data-translation="Классная штука" data-ch="0" data-type="trSpan" style="visibility: inherit !important;">Классная штука</ya-tr-span></a></li>
-          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><ya-tr-span data-index="42-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="Random feature" data-translation="Случайная функция" data-ch="0" data-type="trSpan" style="visibility: inherit !important;">Случайная функция</ya-tr-span></a></li>
-          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><ya-tr-span data-index="43-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="Team feature" data-translation="Командная функция" data-ch="0" data-type="trSpan" style="visibility: inherit !important;">Командная функция</ya-tr-span></a></li>
-          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><ya-tr-span data-index="44-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="Stuff for developers" data-translation="Материалы для разработчиков" data-ch="0" data-type="trSpan" style="visibility: inherit !important;">Материалы для разработчиков</ya-tr-span></a></li>
-          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><ya-tr-span data-index="45-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="Another one" data-translation="Еще один" data-ch="0" data-type="trSpan" style="visibility: inherit !important;">Еще один</ya-tr-span></a></li>
-          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><ya-tr-span data-index="46-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="Last time" data-translation="В последний раз" data-ch="0" data-type="trSpan" style="visibility: inherit !important;">В последний раз</ya-tr-span></a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Классная штука</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Случайная функция</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Командная функция</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Материалы для разработчиков</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Еще один</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">В последний раз</a></li>
         </ul>
       </div>
       <div class="col-6 col-md">
-        <h5><ya-tr-span data-index="47-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="Resources" data-translation="Ресурсы" data-ch="0" data-type="trSpan" style="visibility: inherit !important;">Ресурсы</ya-tr-span></h5>
+        <h5>Ресурсы</h5>
         <ul class="list-unstyled text-small">
-          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><ya-tr-span data-index="48-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="Resource" data-translation="Ресурс" data-ch="0" data-type="trSpan" style="visibility: inherit !important;">Ресурс</ya-tr-span></a></li>
-          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><ya-tr-span data-index="49-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="Resource name" data-translation="Имя ресурса" data-ch="0" data-type="trSpan" style="visibility: inherit !important;">Имя ресурса</ya-tr-span></a></li>
-          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><ya-tr-span data-index="50-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="Another resource" data-translation="Еще один ресурс" data-ch="0" data-type="trSpan" style="visibility: inherit !important;">Еще один ресурс</ya-tr-span></a></li>
-          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><ya-tr-span data-index="51-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="Final resource" data-translation="Конечный ресурс" data-ch="0" data-type="trSpan" style="visibility: inherit !important;">Конечный ресурс</ya-tr-span></a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Ресурс</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Имя ресурса</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Еще один ресурс</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Конечный ресурс</a></li>
         </ul>
       </div>
       <div class="col-6 col-md">
-        <h5><ya-tr-span data-index="52-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="About" data-translation="О нас" data-ch="0" data-type="trSpan" style="visibility: inherit !important;">О нас</ya-tr-span></h5>
+        <h5>О нас</h5>
         <ul class="list-unstyled text-small">
-          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><ya-tr-span data-index="53-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="Team" data-translation="Команда" data-ch="0" data-type="trSpan" style="visibility: inherit !important;">Команда</ya-tr-span></a></li>
-          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><ya-tr-span data-index="54-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="Locations" data-translation="Адреса" data-ch="0" data-type="trSpan" style="visibility: inherit !important;">Адреса</ya-tr-span></a></li>
-          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><ya-tr-span data-index="55-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="Privacy" data-translation="Конфиденциальность" data-ch="0" data-type="trSpan" style="visibility: inherit !important;">Конфиденциальность</ya-tr-span></a></li>
-          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><ya-tr-span data-index="56-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="Terms" data-translation="Условия" data-ch="0" data-type="trSpan" style="visibility: inherit !important;">Условия</ya-tr-span></a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Команда</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Адреса</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Конфиденциальность</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Условия</a></li>
         </ul>
       </div>
     </div>
