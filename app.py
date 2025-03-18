@@ -77,7 +77,11 @@ def index():
 
 
 
-
+@app.route('/market')
+def market():
+    items = Item.query.order_by(Item.price).all()
+    page_info = Page_info.query.all()
+    return render_template("market.html", items=items, page_info=page_info)
 
 @app.route('/create', methods=['GET', 'POST'])
 def create():
@@ -108,7 +112,7 @@ def create():
 @app.route('/about')
 def about():
     page_info = Page_info.query.all()
-    return render_template("new_base.html",  page_info=page_info)
+    return render_template("about.html", page_info=page_info)
 
 @app.route('/buy/<int:id>')
 def item_buy(id):

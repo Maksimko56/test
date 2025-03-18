@@ -1,37 +1,55 @@
 {% extends 'base.html' %}
-{% block company_name %}
-
-     {{ page_info[0].company_name }}
-
-{% endblock %}
 
 {% block title %}
 	<title>{{ page_info[0].home_page }}</title>
 {% endblock %}
-    
-{% block body %}
-    <div class="text-center"><h1>{{ page_info[0].home_page }}</h1>
-    <p><b>{{ page_info[0].company_description_text }}   </b></p></div>
-    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
-    {% for el in items %}
-      <div class="col">
-        <div class="card mb-4 rounded-3 shadow-sm border-primary">
-          <div class="card-header py-3 text-bg-primary border-primary">
-            <h4 class="my-0 fw-normal">{{ el.title }}</h4>
-          </div>
-          <div class="card-body">
-            <h1 class="card-title pricing-card-title">{{ el.price }} ₽</h1>
-            <img height="180" alt={{ el.title }} src={{ el.file }} >
 
-            <p class="list-unstyled mt-3 mb-4">
-            {{ el.description_text }}
-            </p>
-            <a type="button" class="w-100 btn btn-lg btn-primary"
-                    {% if el.isActive == False %} href="#" >Нет в наличии !
-                    {% else %} href="/buy/{{ el.id }}" > Купить {% endif %} </a>
-          </div>
+{% block body %}
+    <div class="intro">
+		<div class="container">
+			<div class="intro_inner">
+					<h1 class="intro_title"> {{ page_info[0].company_name }}</h1>
+					<h2 class="intro_subtitle">Виртуальное в осезаемое</h2>
+                    <a class="btn" href="/galery">Галерея</a>
+                <div class="container">
+                    <img src="/static/site_image/img2.jpg" alt="left" class="image_left_inner">
+                    <img src="/static/site_image/img1.jpg" alt="top" class="image_top_inner">
+                    <img src="/static/site_image/img3.jpg" alt="right" class="image_right_inner">
+                </div>
+
+			</div>
+		</div>
+	</div>
+    <div class="content">
+        <div class="container">
+           <p class="content_title">Наше кредо</p>
+            <div class="container">
+            <h1 class="content_sub_title ">Это не просто 3Dпечать- это наша страсть</h1>
+            <h3 class="content_text_title " >Мы сделали качество нашей привычкой. Это не то, к чему
+                мы просто стремимся – мы живем по этому принципу каждый
+                день. В то время как большая часть вещей, связанных с
+                творческим процессом, будет забыта, о превосходстве наших
+                продуктов и услуг будут помнить.</h3>
+            </div>
         </div>
-      </div>
-    {% endfor %}
+    </div>
+    <div class="content_about">
+        <div class="container">
+            <div class="container"><p class="content_title">О нас</p>
+            <img class="img_work" src="/static/site_image/printer.png">
+            </div>
+            <div class="container">
+            <h1 class="content_sub_title_about">НАШИ ВОЗМОЖНОСТИ</h1>
+
+            </div>
+            <h3 class="content_text_title_about" >
+                Качественная 3D печать по разумным ценам. <br>
+                - Помощь в подготовке модели; <br>
+                - Создание модели по чертежам; <br>
+                - Создание модели по эскизам <br>
+                - Создание модели по картинкам. <br>
+                - Рабочая зона стола: ширина 400*400 высота 400 мм.
+            </h3>
+        </div>
     </div>
 {% endblock %}
