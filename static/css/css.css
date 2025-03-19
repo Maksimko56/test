@@ -81,6 +81,8 @@
   font-style: italic;
 }
 
+
+
 body{
 	margin: 0;
 	font-family: "Roboto Slab", 
@@ -462,17 +464,18 @@ background-color: coral;
 .card__image > img {
   width: 100%;
   height: 100%;
+	max-height: 150px;
   object-fit: contain; /* Встраиваем картинку в контейнер card__image */
   transition: 0.2s;
 }
 
 /* При наведении - увеличиваем картинку */
 .card__image:hover > img {
-  transform: scale(1.1);
+  transform: scale(1.5);
 }
 
 /* Размещаем скидку на товар относительно изображения */
-.card__label {
+.card__label__l {
   padding: 4px 8px;
   position: absolute;
   bottom: 10px;
@@ -484,6 +487,19 @@ background-color: coral;
   color: #fff;
 }
 
+.card__label__r {
+  padding: 4px 8px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: #336dff;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+}
+
+
 .card__bottom {
   display: flex;
   flex-direction: column;
@@ -493,8 +509,8 @@ background-color: coral;
 
 .card__prices {
   display: flex;
-  margin-bottom: 10px;
-  flex: 0 0 50%; /* Размещаем цены равномерно в две колонки */
+  margin-bottom: 5px;
+
 }
 
 .card__price::after {
@@ -541,6 +557,19 @@ background-color: coral;
   font-size: 17px;
   line-height: 150%;
   color: #414141;
+	text-align: center;
+
+}
+
+.card__sub__title {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 150%;
+  color: #414141;
+	text-align: left;
+
 }
 
 .card__title:hover {
@@ -568,3 +597,36 @@ background-color: coral;
   background-color: coral;
   color: #ffffff;
 }
+
+.error__page__text {
+
+	font-size: 70px;
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+	color: #ff0000;
+	text-align: center;
+}
+.blinckers{
+	animation: blinker 1.5s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+
+.error__page__img {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+	height: 38vh;
+	background: url("https://i.pinimg.com/736x/1d/ee/a6/1deea6d646101fec6a0adde26345c993.jpg") center no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+
+}
+

@@ -11,7 +11,7 @@ ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///shop.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///3dshops.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['FLASK_ADMIN_SWATCH'] = 'cerulean'
 app.config['SECRET_KEY'] = 'password'
@@ -56,6 +56,8 @@ class Item(db.Model):
     title = db.Column(db.String(100), nullable=False)
     price = db.Column(db.Integer, nullable=False)
     description_text = db.Column(db.Text, nullable=True)
+    format_file = db.Column(db.String(100), nullable=False)
+    material = db.Column(db.String(100), nullable=False)
     file = db.Column(db.Text, nullable=False)
     isActive = db.Column(db.Boolean, default=True)
 
@@ -114,9 +116,14 @@ def about():
     page_info = Page_info.query.all()
     return render_template("about.html", page_info=page_info)
 
+@app.route('/galery')
+def galery():
+    page_info = Page_info.query.all()
+    return render_template("error.html", page_info=page_info)
+
 @app.route('/buy/<int:id>')
 def item_buy(id):
-    return str(id)
+    return render_template("error.html", id=id)
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -23,13 +23,14 @@
           <!-- Верхняя часть -->
           <div class="card__top">
                <!-- Ссылка-название товара -->
-            <a href="/buy/{{ el.id }}" class="card__title">{{ el.title }}</a>
+            <p  class="card__title">{{ el.title }}</p>
             <!-- Изображение-ссылка товара -->
-            <a href="#" class="card__image">
-                <img  alt={{ el.title }} src={{ el.file }} >
+            <a href="/buy/{{ el.id }}" class="card__image">
+                <img alt={{ el.title }} src={{ el.file }} >
             </a>
             <!-- Скидка на товар -->
-            <div class="card__label">STL</div>
+            <div class="card__label__l">{{ el.format_file }}</div>
+              <div class="card__label__r">{{ el.material }}</div>
           </div>
           <!-- Нижняя часть -->
           <div class="card__bottom">
@@ -38,9 +39,9 @@
               <div class="card__price card__price--common">{{ el.price }}</div>
             </div>
                 <!--jgbcfybt товара -->
-              <p class="card__title">{{ el.description_text }}</p>
+              <p class="card__sub__title">{{ el.description_text }}</p>
             <!-- Кнопка добавить в корзину -->
-            <button class="card__add">Купить</button>
+            <a href="/buy/{{ el.id }}" class="card__add btn">Купить {{ el.format_file }}</a>
           </div>
         </div>
            {% endfor %}
