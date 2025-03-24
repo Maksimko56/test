@@ -7,14 +7,16 @@
 wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
 	
 	<meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles_cards.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/css.css') }}">
+
     {% block title %}{% endblock %}
 </head>
 <body>
 	<header class="header">
 		<div class="container">
 				<div class="header_inner">
-					<img class="header_logo" src="/static/site_image/logo.png"></img>
+                    <a href="/"><img class="header_logo" src="/static/site_image/logo.png"></a>
 					<nav class="nav lato-bold">
 					<a class="nav_link" href="/">Главная</a>
 					<a class="nav_link" href="/galery">Галерея</a>
@@ -44,8 +46,13 @@ wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+S
             <div class="grid_4">
                 <p>+79325508930</p>
                 <p>3dprintbuzuluk@mail.ru</p>
-         </div>
-        </div>
+            </div>
+            <div class="grid_5">
+                <a href="https://vk.com/3dprintbuzuluk"><img class="footer__icon__image" src="/static/site_image/vk_icon.png"></a>
+                <a href="https://t.me/I3DPrintBUzuluk"><img class="footer__icon__image" src="/static/site_image/tg_icon.png"></a>
+            </div>
+       
+   </div>
 </footer>
 </body>
 </html>

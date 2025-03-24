@@ -9,14 +9,24 @@
 {% endblock %}
 
 {% block body %}
-        <div class="market_intro">
-    <div class="intro_inner">
-					<h1 class="intro_title"> {{ page_info[0].company_name }}</h1>
-					<h2 class="intro_subtitle">Виртуальное в осезаемое</h2>
-    </div>
-    </div>
-    <hr>
-        <div class="text-center"><h1>{{ page_info[0].about_page }}</h1>
-    <p><b>{{ page_info[0].company_about }} </b></p></div>
 
+   <h1 class="h1_about">Наша мастерская</h1>
+    <div class="container">
+
+        <div class="content_sub_title_about">
+            <p>Оренбургская обл. Бузулук</p>
+            <dl class="about__list">
+                <dt><h3><br>Время</h3></dt>
+                    <dd>Понедельник-Пятница </dd>
+                    <dd>с 9 - до 18 часов</dd>
+                <dt><h3><br>Контакты</h3></dt>
+                    <dd>+79325508930</dd>
+                    <dd>3dprintbuzuluk@mail.ru</dd>
+            </dl>
+
+            <a href="https://t.me/I3DPrintBUzuluk" class="btn">Связатся в Telegram</a>
+        </div>
+    <iframe class="card_googl_panel" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d738.474111467714!2d52.248391832719356!3d52.78254758032522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1742441542889!5m2!1sru!2sru"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
 {% endblock %}

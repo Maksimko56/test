@@ -17,35 +17,24 @@
     </div>
     </div>
     <hr>
-    <div class="cards">
+    <p class="p_market">Модели подготовлены к печати на 3D принтере!</p>
+    <h1 class="h1_market">Здесь можно приобрести наши работы в формате 3D</h1>
+    <hr>
+    <div class="product-container">
      {% for el in items %}
-         <div class="card">
-          <!-- Верхняя часть -->
-          <div class="card__top">
-               <!-- Ссылка-название товара -->
-            <p  class="card__title">{{ el.title }}</p>
-            <!-- Изображение-ссылка товара -->
-            <a href="/buy/{{ el.id }}" class="card__image">
-                <img alt={{ el.title }} src={{ el.file }} >
-            </a>
-            <!-- Скидка на товар -->
-            <div class="card__label__l">{{ el.format_file }}</div>
-              <div class="card__label__r">{{ el.material }}</div>
-          </div>
-          <!-- Нижняя часть -->
-          <div class="card__bottom">
-            <!-- Цены на товар (с учетом скидки и без)-->
-            <div class="card__prices">
-              <div class="card__price card__price--common">{{ el.price }}</div>
-            </div>
-                <!--jgbcfybt товара -->
-              <p class="card__sub__title">{{ el.description_text }}</p>
-            <!-- Кнопка добавить в корзину -->
-            <a href="/buy/{{ el.id }}" class="card__add btn">Купить {{ el.format_file }}</a>
-          </div>
+         <div class="product-card">
+             <div class="image-container">
+            <img src={{ el.file }} alt={{ el.file }}>
+            <div class="file-format">{{ el.format_file }}</div>
         </div>
+        <h2>{{ el.title }}</h2>
+        <p class="description">{{ el.description_text }}</p>
+        <p class="price">₽ {{ el.price }}</p>
+        <button>Купить {{ el.format_file }}</button>
+    </div>
            {% endfor %}
-        </div>
+    </div>
+    <hr>
 
 
 {% endblock %}
