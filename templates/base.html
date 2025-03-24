@@ -7,8 +7,9 @@
 wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
 	
 	<meta charset="UTF-8">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles_cards.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/css.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles_cards.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles_gallery.css') }}">
 
     {% block title %}{% endblock %}
 </head>
@@ -19,7 +20,7 @@ wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+S
                     <a href="/"><img class="header_logo" src="/static/site_image/logo.png"></a>
 					<nav class="nav lato-bold">
 					<a class="nav_link" href="/">Главная</a>
-					<a class="nav_link" href="/galery">Галерея</a>
+					<a class="nav_link" href="/gallery">Галерея</a>
 					<a class="nav_link" href="/market">3D Модели</a>
 					<a class="nav_link" href="/about">О нас</a>
 					</nav>

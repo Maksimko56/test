@@ -1,4 +1,4 @@
-from flask import Flask,render_template, request, redirect, flash, url_for
+from flask import Flask,render_template, request, redirect, flash, url_for, Response
 from flask_admin import Admin
 from werkzeug.utils import secure_filename
 from flask_sqlalchemy import SQLAlchemy
@@ -116,10 +116,10 @@ def about():
     page_info = Page_info.query.all()
     return render_template("about.html", page_info=page_info)
 
-@app.route('/galery')
+@app.route('/gallery')
 def galery():
     page_info = Page_info.query.all()
-    return render_template("error.html", page_info=page_info)
+    return render_template("gallery.html", page_info=page_info)
 
 @app.route('/buy/<int:id>')
 def item_buy(id):
