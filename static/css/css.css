@@ -271,6 +271,21 @@ background-color: coral;
 	float:right;
 }
 
+
+.content_about{
+ 	display: flex;
+ 	flex-direction: column;
+ 	justify-content: center;
+ 	width: 100%;
+ 	height: 80vh;
+ 	max-width: 900px;
+ 	margin: 0 auto;
+ 	text-align: center;
+
+ }
+
+
+
 .h1_about{
 	display: flex;
 	margin-top: 80px;
